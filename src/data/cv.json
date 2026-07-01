@@ -9,8 +9,12 @@
     { "text": "+31 6 27544814", "href": "tel:+31627544814" },
     { "text": "Sittard, Limburg, NL", "href": "#" },
     {
-      "text": "linkedin.com/in/ryan-houben-467a7b144",
+      "text": "Linkedin",
       "href": "https://www.linkedin.com/in/ryan-houben-467a7b144"
+    },
+    {
+      "text": "Github",
+      "href": "https://github.com/RyanHouben98"
     }
   ],
   "summary": "Full-stack software engineer specializing in .NET and Angular with experience delivering production applications from architecture and implementation to deployment. Passionate about clean architecture, maintainable code, and building reusable software components in collaborative agile teams.",
