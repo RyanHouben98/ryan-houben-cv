@@ -2,32 +2,28 @@
   "name": "Ryan Houben",
   "role": "Software Engineer",
   "contacts": [
-    { "text": "connect@ryanhouben.com", "href": "mailto:connect@ryanhouben.com" },
+    {
+      "text": "connect@ryanhouben.com",
+      "href": "mailto:connect@ryanhouben.com"
+    },
     { "text": "+31 6 27544814", "href": "tel:+31627544814" },
     { "text": "Sittard, Limburg, NL", "href": "#" },
-    { "text": "linkedin.com/in/ryan-houben-467a7b144", "href": "https://www.linkedin.com/in/ryan-houben-467a7b144" }
+    {
+      "text": "linkedin.com/in/ryan-houben-467a7b144",
+      "href": "https://www.linkedin.com/in/ryan-houben-467a7b144"
+    }
   ],
-  "summary": "Software engineer with a strong focus on .NET back-ends and modern Angular front-ends. I build full-stack solutions from research through to production, and care about clean architecture, code quality, and reusable UI. Graduated in Computer Software Engineering, comfortable working in agile teams and collaborating closely with product and design.",
+  "summary": "Full-stack software engineer specializing in .NET and Angular with experience delivering production applications from architecture and implementation to deployment. Passionate about clean architecture, maintainable code, and building reusable software components in collaborative agile teams.",
   "experience": [
     {
-      "title": "Software Engineer",
+      "title": "Software Engineer (Intern → Software Engineer)",
       "company": "Konekti",
-      "date": "Aug 2024 — Present · Eindhoven",
+      "date": "Feb 2024 — Present · Eindhoven",
       "bullets": [
-        "Design and implement features.",
-        "Improve code quality.",
-        "Refactored the Angular front-end into a modern Angular application.",
-        "Created the Konekti-ui library."
-      ]
-    },
-    {
-      "title": "Intern Software Engineer",
-      "company": "Konekti",
-      "date": "Feb 2024 — Jul 2024 · Eindhoven",
-      "bullets": [
-        "Researched an auditing solution using the DOT framework.",
-        "Built a full-stack auditing solution from start to production.",
-        "Took the lead in refactoring the back-end API into Clean Architecture."
+        "Built an auditing platform from research through production deployment.",
+        "Improved maintainability by refactoring the backend to Clean Architecture.",
+        "Designed and maintained a reusable Angular UI component library.",
+        "Delivered new features across the .NET backend and Angular frontend."
       ]
     },
     {
@@ -35,7 +31,7 @@
       "company": "SMPL",
       "date": "Feb 2023 — Jul 2023 · Heerlen/Eindhoven",
       "bullets": [
-        "Created an Angular front-end for the accounting application project."
+        "Developed the Angular front-end for the accounting application project."
       ]
     },
     {
@@ -43,7 +39,7 @@
       "company": "B2CTRL B.V.",
       "date": "May 2022 — Jan 2024 · Heerlen",
       "bullets": [
-        "Built and maintained WordPress websites alongside my studies.",
+        "Developed and maintained WordPress websites alongside my studies.",
         "Set up devices and supported employees with their IT questions."
       ]
     },
@@ -52,14 +48,23 @@
       "company": "Zorg-Lokaal",
       "date": "Mar 2017 — Nov 2019 · Sittard",
       "bullets": [
-        "Built a survey tool for municipalities that produces a scored output."
+        "Developed a survey tool for municipalities that produces a scored output."
       ]
     }
   ],
   "skills": [
-    { "label": "Languages", "items": ["C#", "TypeScript", "SQL", "JavaScript"] },
-    { "label": "Frameworks", "items": [".NET", "Angular", "React", "Next.js", "Astro"] },
-    { "label": "Databases & Tools", "items": ["PostgreSQL", "Git", "Azure", "Azure DevOps", "CI/CD Pipelines"] }
+    {
+      "label": "Languages",
+      "items": ["C#", "TypeScript", "SQL", "JavaScript"]
+    },
+    {
+      "label": "Frameworks",
+      "items": [".NET", "Angular", "React", "Next.js", "Astro"]
+    },
+    {
+      "label": "Tools",
+      "items": ["PostgreSQL", "Git", "Azure", "Azure DevOps", "CI/CD"]
+    }
   ],
   "education": [
     {
