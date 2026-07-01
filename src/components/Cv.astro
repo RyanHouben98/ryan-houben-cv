@@ -1,0 +1,148 @@
+---
+import cv from '../data/cv.json';
+---
+
+<button class="dl" id="download-btn" type="button">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 3v12" /><path d="m7 11 5 4 5-4" /><path d="M4 21h16" />
+  </svg>
+  Download PDF
+</button>
+
+<div class="desk">
+  <div class="page">
+    <header class="hdr">
+      <div class="hdr-main">
+        <h1 class="name">{cv.name}</h1>
+        <p class="role accent mono">{cv.role}</p>
+        <div class="contacts mono">
+          {cv.contacts.map((c) => (
+            <a href={c.href}><span class="dot"></span>{c.text}</a>
+          ))}
+        </div>
+      </div>
+      <div class="photo">
+        <img src="./ryan.jpg" alt={cv.name} onerror="this.style.display='none';this.parentElement.classList.add('empty')" />
+        <span class="photo-hint mono">Add<br />public/photo.jpg</span>
+      </div>
+    </header>
+    <hr class="hair" style="margin-top:24px" />
+
+    <section class="sec">
+      <div class="sec-hd"><span class="num mono">01</span><h2>Summary</h2><span class="line"></span></div>
+      <p class="summary">{cv.summary}</p>
+    </section>
+
+    <section class="sec">
+      <div class="sec-hd"><span class="num mono">02</span><h2>Experience</h2><span class="line"></span></div>
+      {cv.experience.map((job) => (
+        <div class="job">
+          <div class="job-top">
+            <p class="job-title">{job.title} · <span class="job-co">{job.company}</span></p>
+            <span class="job-date mono">{job.date}</span>
+          </div>
+          <ul class="bullets">
+            {job.bullets.map((b) => <li>{b}</li>)}
+          </ul>
+        </div>
+      ))}
+    </section>
+
+    <div class="cols">
+      <section class="sec">
+        <div class="sec-hd"><span class="num mono">03</span><h2>Skills</h2><span class="line"></span></div>
+        {cv.skills.map((grp) => (
+          <div class="skillgrp">
+            <p class="skill-lbl mono">{grp.label}</p>
+            <div class="chips mono">
+              {grp.items.map((s) => <span class="chip">{s}</span>)}
+            </div>
+          </div>
+        ))}
+      </section>
+      <section class="sec">
+        <div class="sec-hd"><span class="num mono">04</span><h2>Education</h2><span class="line"></span></div>
+        {cv.education.map((ed) => (
+          <div class="edu">
+            <h3>{ed.degree}</h3>
+            <p class="school accent">{ed.school}</p>
+            <p class="meta mono">{ed.meta}</p>
+          </div>
+        ))}
+      </section>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.getElementById('download-btn')?.addEventListener('click', () => window.print());
+</script>
+
+<style>
+  .mono { font-family: 'IBM Plex Mono', monospace; }
+  .accent { color: #2563eb; }
+  .muted { color: #71717a; }
+  .hair { height: 1px; background: #e4e4e7; border: 0; margin: 0; }
+  .desk { min-height: 100vh; padding: 40px 20px 80px; display: flex; justify-content: center; }
+  .page { width: 794px; min-height: 1123px; background: #fff; padding: 56px 60px; box-shadow: 0 6px 30px rgba(0,0,0,.10); position: relative; }
+
+  /* header */
+  .hdr { display: flex; gap: 28px; align-items: flex-start; }
+  .hdr-main { flex: 1; min-width: 0; }
+  .name { font-size: 34px; font-weight: 700; letter-spacing: -.02em; line-height: 1.05; margin: 0; }
+  .role { font-size: 14px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; margin: 8px 0 0; }
+  .contacts { display: flex; flex-wrap: wrap; gap: 6px 20px; margin-top: 16px; font-size: 12.5px; }
+  .contacts a { color: #18181b; text-decoration: none; display: flex; align-items: center; gap: 7px; }
+  .dot { width: 4px; height: 4px; border-radius: 50%; background: #2563eb; flex: none; }
+
+  /* photo */
+  .photo { width: 104px; height: 104px; flex: none; border-radius: 10px; overflow: hidden; position: relative; }
+  .photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .photo-hint { display: none; }
+  .photo.empty { border: 1px dashed #d4d4d8; background: #fafafa; display: flex; align-items: center; justify-content: center; }
+  .photo.empty .photo-hint { display: block; text-align: center; font-size: 10px; line-height: 1.4; color: #a1a1aa; }
+
+  /* sections */
+  .sec { margin-top: 22px; }
+  .sec-hd { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .sec-hd h2 { font-size: 12px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; margin: 0; white-space: nowrap; }
+  .sec-hd .num { font-size: 11px; color: #2563eb; }
+  .sec-hd .line { flex: 1; height: 1px; background: #e4e4e7; }
+  .summary { font-size: 13.5px; line-height: 1.6; color: #3f3f46; margin: 0; max-width: 62ch; }
+
+  /* experience */
+  .job { margin-bottom: 14px; }
+  .job:last-child { margin-bottom: 0; }
+  .job-top { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
+  .job-title { font-size: 14.5px; font-weight: 600; margin: 0; }
+  .job-co { font-size: 13px; color: #2563eb; font-weight: 500; }
+  .job-date { font-size: 11.5px; color: #71717a; white-space: nowrap; flex: none; }
+  .bullets { margin: 9px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 5px; }
+  .bullets li { font-size: 12.7px; line-height: 1.55; color: #3f3f46; padding-left: 16px; position: relative; }
+  .bullets li::before { content: '\2013'; position: absolute; left: 0; color: #a1a1aa; }
+
+  /* two-col lower */
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 34px; }
+  .skillgrp { margin-bottom: 12px; }
+  .skillgrp:last-child { margin-bottom: 0; }
+  .skill-lbl { font-size: 11px; letter-spacing: .06em; color: #71717a; margin: 0 0 5px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .chip { font-size: 11.5px; padding: 3px 9px; border: 1px solid #e4e4e7; border-radius: 5px; background: #fafafa; }
+  .edu { margin-bottom: 14px; }
+  .edu:last-child { margin-bottom: 0; }
+  .edu h3 { font-size: 13.5px; font-weight: 600; margin: 0; }
+  .edu .school { font-size: 12.5px; color: #2563eb; margin: 2px 0 0; }
+  .edu .meta { font-size: 11.5px; color: #71717a; margin: 3px 0 0; }
+
+  /* download button */
+  .dl { position: fixed; top: 22px; right: 26px; z-index: 50; display: flex; align-items: center; gap: 9px; padding: 11px 18px; background: #18181b; color: #fff; border: 0; border-radius: 8px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 500; cursor: pointer; box-shadow: 0 4px 16px rgba(0,0,0,.2); }
+  .dl:hover { background: #2563eb; }
+  .dl svg { width: 15px; height: 15px; }
+
+  @media print {
+    @page { size: A4; margin: 0; }
+    .desk { padding: 0; display: block; }
+    .page { width: 100%; min-height: auto; box-shadow: none; padding: 52px 56px; }
+    .dl { display: none !important; }
+  }
+</style>

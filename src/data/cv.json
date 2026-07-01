@@ -1,0 +1,76 @@
+{
+  "name": "Ryan Houben",
+  "role": "Software Engineer",
+  "contacts": [
+    { "text": "connect@ryanhouben.com", "href": "mailto:connect@ryanhouben.com" },
+    { "text": "+31 6 27544814", "href": "tel:+31627544814" },
+    { "text": "Sittard, Limburg, NL", "href": "#" },
+    { "text": "linkedin.com/in/ryan-houben-467a7b144", "href": "https://www.linkedin.com/in/ryan-houben-467a7b144" }
+  ],
+  "summary": "Software engineer with a strong focus on .NET back-ends and modern Angular front-ends. I build full-stack solutions from research through to production, and care about clean architecture, code quality, and reusable UI. Graduated in Computer Software Engineering, comfortable working in agile teams and collaborating closely with product and design.",
+  "experience": [
+    {
+      "title": "Software Engineer",
+      "company": "Konekti",
+      "date": "Aug 2024 — Present · Eindhoven",
+      "bullets": [
+        "Design and implement features.",
+        "Improve code quality.",
+        "Refactored the Angular front-end into a modern Angular application.",
+        "Created the Konekti-ui library."
+      ]
+    },
+    {
+      "title": "Intern Software Engineer",
+      "company": "Konekti",
+      "date": "Feb 2024 — Jul 2024 · Eindhoven",
+      "bullets": [
+        "Researched an auditing solution using the DOT framework.",
+        "Built a full-stack auditing solution from start to production.",
+        "Took the lead in refactoring the back-end API into Clean Architecture."
+      ]
+    },
+    {
+      "title": "Intern Software Developer",
+      "company": "SMPL",
+      "date": "Feb 2023 — Jul 2023 · Heerlen/Eindhoven",
+      "bullets": [
+        "Created an Angular front-end for the accounting application project."
+      ]
+    },
+    {
+      "title": "Web Developer",
+      "company": "B2CTRL B.V.",
+      "date": "May 2022 — Jan 2024 · Heerlen",
+      "bullets": [
+        "Built and maintained WordPress websites alongside my studies.",
+        "Set up devices and supported employees with their IT questions."
+      ]
+    },
+    {
+      "title": "Intern Software Developer",
+      "company": "Zorg-Lokaal",
+      "date": "Mar 2017 — Nov 2019 · Sittard",
+      "bullets": [
+        "Built a survey tool for municipalities that produces a scored output."
+      ]
+    }
+  ],
+  "skills": [
+    { "label": "Languages", "items": ["C#", "TypeScript", "SQL", "JavaScript"] },
+    { "label": "Frameworks", "items": [".NET", "Angular", "React", "Next.js", "Astro"] },
+    { "label": "Databases & Tools", "items": ["PostgreSQL", "Git", "Azure", "Azure DevOps", "CI/CD Pipelines"] }
+  ],
+  "education": [
+    {
+      "degree": "Bachelor, Computer Software Engineering",
+      "school": "Fontys Hogeschool",
+      "meta": "2019 — 2024 · Eindhoven"
+    },
+    {
+      "degree": "Application & Media Development",
+      "school": "ROC Leeuwenborgh",
+      "meta": "2016 — 2019 · Sittard"
+    }
+  ]
+}
