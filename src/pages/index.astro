@@ -25,7 +25,17 @@ import cv from '../data/cv.json';
         color: #18181b;
         -webkit-font-smoothing: antialiased;
       }
-      @media print { body { background: #fff; } }
+      .dot, .sec-hd .line, .hair, .chip { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+      @media print {
+        @page { size: A4; margin: 0; }
+        .desk { padding: 0; display: block; }
+        .page { width: 100%; min-height: auto; box-shadow: none; padding: 40px 56px; }
+        .dl { display: none !important; }
+        .sec { margin-top: 18px; }
+        .job { margin-bottom: 11px; }
+        hr.hair { margin-top: 20px !important; }
+      }
     </style>
   </head>
   <body>
